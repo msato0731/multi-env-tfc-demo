@@ -18,3 +18,9 @@ variable "tfc_aws_role_arn" {
   type = string
   description = "The arn of your Terraform Cloud aws role arn"
 }
+
+variable "tfc_workspace_auto_apply" {
+  type = bool
+  default     = "false"
+  description = "Whether to automatically apply changes when a Terraform plan is successful"
+}

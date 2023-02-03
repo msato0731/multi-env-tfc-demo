@@ -16,6 +16,7 @@ terraform {
     }
   }
 }
+# TODO: tfstateをterraform cloud管理
 
 module "vpc" {
   source  = "terraform-aws-modules/vpc/aws"

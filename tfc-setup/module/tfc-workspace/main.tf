@@ -2,6 +2,7 @@ resource "tfe_workspace" "workspace" {
   name         = var.tfc_workspace_name
   organization = var.tfc_organization_name
   project_id = var.tfc_project_id
+  auto_apply = var.tfc_workspace_auto_apply
 }
 
 resource "tfe_variable" "enable_aws_provider_auth" {
