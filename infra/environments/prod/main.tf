@@ -2,7 +2,7 @@ provider "aws" {
   region = "ap-northeast-1"
   default_tags {
     tags = {
-      Env       = "prd"
+      Env       = "prod"
       Terraform = "true"
       SystemName = "tfc-demo"
     }
@@ -21,7 +21,7 @@ terraform {
 module "vpc" {
   source  = "terraform-aws-modules/vpc/aws"
 
-  name = "prd-vpc"
+  name = "prod-vpc"
   cidr = "10.10.0.0/16"
 
   azs                       = ["ap-northeast-1a", "ap-northeast-1c"]
@@ -32,5 +32,5 @@ module "vpc" {
 module "ec2" {
   source = "../../modules/ec2"
   subnet_id = module.vpc.private_subnets[0]
-  instance_name = "tfc-demo-prd"
+  instance_name = "tfc-demo-prod"
 }

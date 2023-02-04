@@ -22,10 +22,10 @@ module "stg_tfc_iam_role" {
   iam_oidc_tfc_provider_client_id = one(aws_iam_openid_connect_provider.tfc_provider.client_id_list)
 }
 
-module "prd_tfc_iam_role" {
+module "prod_tfc_iam_role" {
   source = "../../module/tfc-iam-role"
-  tfc_workspace_name    = "multi-env-demo-prd"
-  tfc_iam_role_name = "tfc-prd-role"
+  tfc_workspace_name    = "multi-env-demo-prod"
+  tfc_iam_role_name = "tfc-prod-role"
   tfc_project_name        = var.tfc_project_name
   tfc_organization_name = var.tfc_organization_name
   iam_oidc_tfc_provider_arn = aws_iam_openid_connect_provider.tfc_provider.arn
