@@ -1,3 +1,4 @@
+# TODO: 不要な変数を削除
 variable "tfc_aws_audience" {
   type        = string
   default     = "aws.workload.identity"
