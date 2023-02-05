@@ -4,7 +4,7 @@ provider "aws" {
     tags = {
       Env       = "stg"
       Terraform = "true"
-      SystemName = "tfc-demo"
+      SystemName = "tfc-demo2"
     }
   }
 }
