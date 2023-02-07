@@ -16,12 +16,11 @@ terraform {
     }
   }
 }
-# TODO: tfstateをterraform cloud管理
 
 module "vpc" {
   source  = "terraform-aws-modules/vpc/aws"
 
-  name = "prod-vpc"
+  name = "prod-vpc-01"
   cidr = "10.10.0.0/16"
 
   azs                       = ["ap-northeast-1a", "ap-northeast-1c"]
