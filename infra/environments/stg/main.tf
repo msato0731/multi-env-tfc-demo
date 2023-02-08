@@ -31,5 +31,5 @@ module "vpc" {
 module "ec2" {
   source = "../../modules/ec2"
   subnet_id = module.vpc.private_subnets[0]
-  instance_name = "tfc-demo-stg"
+  instance_name = "tfc-demo-stg-01"
 }
