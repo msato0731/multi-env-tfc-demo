@@ -20,7 +20,7 @@ terraform {
 module "vpc" {
   source  = "terraform-aws-modules/vpc/aws"
 
-  name = "prod-vpc-02"
+  name = "prod-vpc-03"
   cidr = "10.10.0.0/16"
 
   azs                       = ["ap-northeast-1a", "ap-northeast-1c"]
