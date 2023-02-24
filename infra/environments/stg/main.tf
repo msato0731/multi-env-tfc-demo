@@ -4,7 +4,7 @@ provider "aws" {
     tags = {
       Env       = "stg"
       Terraform = "true"
-      SystemName = "tfc-demo2"
+      SystemName = "tfc-demo"
     }
   }
 }
@@ -20,7 +20,7 @@ terraform {
 module "vpc" {
   source  = "terraform-aws-modules/vpc/aws"
 
-  name = "stg-vpc"
+  name = "stg-vpc-test-02"
   cidr = "10.10.0.0/16"
 
   azs                       = ["ap-northeast-1a", "ap-northeast-1c"]
@@ -31,5 +31,5 @@ module "vpc" {
 module "ec2" {
   source = "../../modules/ec2"
   subnet_id = module.vpc.private_subnets[0]
-  instance_name = "tfc-demo-stg"
+  instance_name = "tfc-demo-stg-01"
 }
